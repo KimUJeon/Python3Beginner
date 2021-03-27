@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+T1 = ('a', 'b', 'c')
+T2 = (1, 2, 3)
+T3 = (4, 'd')
+
+print(T1[2], T2[1])
+
+T1 = T1 + T3
+print(T1)
+
+print(T1[2:6])
+print(T3 * T2[2])
+
+
+'''
+c 2
+('a', 'b', 'c', 4, 'd')
+('c', 4, 'd')
+(4, 'd', 4, 'd', 4, 'd')
+'''
