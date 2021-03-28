@@ -1,0 +1,19 @@
+fruits = {"apple" : "red", "banana" : "yellow", "grape" : "purple", "melon" : "green"}
+
+for color in fruits.values():
+    print(color, end = ' ')
+print()
+
+for fruit in fruits.keys():
+    print(fruit, end = ' ')
+print()
+
+for fruit, color in fruits.items():
+    print("%s의 색은 %s" %(fruit, color), end = ', ')
+    
+    
+'''
+red yellow purple green
+apple banana grape melon
+apple의 색은 red, banana의 색은 yellow, grape의 색은 purple, melon의 색은 green,
+'''
