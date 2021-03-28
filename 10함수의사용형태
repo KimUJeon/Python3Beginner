@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+sum = 0
+
+def my_func(sum):
+	for i in range(5):
+		a = int(input(""))
+		sum += a
+	return sum
+	
+print(my_func(sum))
+
+'''
+15
+'''
+
+def guide() : #매개변수 X, 반환값 X
+    print("두 정수를 입력받아 곱한 결과를 출력하는 프로그램입니다.")
+    
+def inputnums() : #매개변수 X, 반환값 O
+    a = int(input("첫번째 정수를 입력하세요:"))
+    b = int(input("두번째 정수를 입력하세요:"))
+    return a, b
+
+def multi(num1, num2) : #매개변수 O, 반환값 O
+    return num1 * num2
+    
+def printResult(result) : #매개변수 O, 반환값 X
+    print("두 수의 곱셈 결과는 %d입니다." %result)
+    
+guide()
+n1, n2 = inputnums() #반환 값이 두 개이니 두 변수에 초기화
+res = multi(n1, n2)
+printResult(res)
+
+
+'''
+2
+3
+두 수 곱셈결과 6
+'''
