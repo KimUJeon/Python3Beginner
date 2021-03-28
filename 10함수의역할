@@ -1,0 +1,36 @@
+#함수 선언
+def plusThree(num) :
+    return num + 3
+
+#함수 호출
+result = plusThree(10)
+
+print(result)
+
+
+#함수 선언
+def stdInfo(rrn) :
+    if int(rrn[6]) == 3 or int(rrn[6]) == 4 :
+        biryear = int(rrn[0]+rrn[1]) + 2000
+    else :
+        biryear = int(rrn[0]+rrn[1]) + 1900
+    
+    age = year - biryear + 1
+    birmonth = int(rrn[2] + rrn[3])
+    birday = int(rrn[4] + rrn[5])
+    
+    if rrn[6] == "2" or rrn[6] == "4" :
+        gen = "여자"
+    else :
+        gen = "남자"
+        
+    return [age, birmonth, birday, gen] #리스트 형식으로 반환
+
+year = 2018
+stdlist = []
+
+stdrrn = input("학생의 주민등록번호를 7자리 입력하세요:")
+
+stdlist.append(stdInfo(stdrrn)) #함수 호출
+
+print(stdlist[0])
