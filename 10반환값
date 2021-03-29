@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+def my_func(string):
+	a = string.upper()
+	b = string.lower()
+	
+	return a, b
+	
+print(my_func("Hello World!"))
+
+
+'''
+('HELLO WORLD!', 'hello world!')
+'''
+
+# 다른 언어에서는 반환 값이 몇개인지 어떤 자료형인지 입력해야 하지만 파이썬에서는 return 만 입력해도 무방함
+# 다수를 작성하면 리스트나 튜플로 반환이 가능하다
+# 파이썬은 return에 다수의 값이 적혀 있을 경우 자동으로 튜플 값으로 반환한다.
+# return은 함수를 종료함과 동시에 값을 반환하는 키워드다.
