@@ -1,0 +1,64 @@
+# num은 전역변수, n은 지역변수이므로 plusNum을 벗어난 위치에서는 n이 사용이 불가능하다
+
+
+def plusNum(n) :
+    return n + num
+
+num = 3
+print(plusNum(17))
+print(n) #n은 지역변수이기 때문에 에러 발생
+
+-------------------------------------------------------------------------------------------
+
+# 함수 안에서 전역변수에 새로운 값을 대입하는 것은 불가능하다.
+# globallist 에 append 를 통해 3을 추가하는 함수는 가능함
+
+
+num = 3 #전역 변수 num 선언
+globallist = [] #전역 변수 globallist 선언
+
+def mulNum(a) : #지역 변수 a 선언
+    a = a * num
+    globallist.append(3)
+    return a #a 소멸
+
+def subNum(a) : #지역 변수 a 선언
+    a = a - num
+    print(a) #a 소멸
+
+res = mulNum(4) #전역 변수 res 선언
+print(res)
+
+subNum(7)
+print(num)
+print(globallist) #프로그램 종료, 전역 변수 num, res, globallist 소멸
+
+'''
+12
+4
+3
+[3]
+'''
+
+
+
+------------------------------------------------------------------------------
+
+# 가능한 global을 사용하지 않고 전역 변수를 수정 하는 것을 추천함
+
+num = 1 #전역변수 선언
+
+def plusNum(a) :
+	a += 1
+	print(a)
+	
+	return a
+
+num = plusNum(num)
+print(num)
+
+
+'''
+2
+2
+'''
