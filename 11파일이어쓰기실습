@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+f = open("data/add.txt", "a")
+name = f.write(input())
+f.close()
+
+a = open("data/add.txt", "r")
+print(a.read())
+a.close()
+
+'''
+당신의 이름은 무엇입니까?
+구르미
+'''
