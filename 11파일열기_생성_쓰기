@@ -1,0 +1,31 @@
+# 파일 객체 이름 = open("파일 경로/파일 이름", "파일 열기 모드")
+# 경로 - C:/data/test.txt 파일 열고 다 쓴후 파일 객체.close()를 통해 닫기
+# write() 들어가는 인자 문자열만 가능
+
+
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+A = [1,2,3,4,5,6,7,8,9,10]
+A = sorted(A) # 오름차순 정렬
+F = open("data/out.txt", "w") # data/out.txt 경로의 파일을 쓰기모드로 연다.
+  
+for i in A:
+	print(i)
+	data = str(i) # data에 i를 문자열로 입력한다
+	F.write(data) # F 파일에 data 값을 작성한다.
+  
+F.close()
+
+'''
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+'''
