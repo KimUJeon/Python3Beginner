@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+def num_list(a, b):
+	lists = [a+b, a-b, a*b]
+	return lists
+	
+num1 = int(input())
+num2 = int(input())
+print(num_list(num1, num2))
+
+'''
+5 와 8 입력시
+[13, -3, 40] 출력
+'''
