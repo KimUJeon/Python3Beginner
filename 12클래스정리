@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+class phoneBook():
+	def __init__(self, name, number, residence):
+		self.name = name
+		self.number = number
+		self.residence = residence
+		print("info is saved")
+
+	def showData(self):
+		print("%s 거주 %s: %s" %(self.residence, self.name, self.number))
+
+
+class BestFriend(phoneBook):
+	def __init__(self, name, number, residence, age, hobby):
+		self.name = name
+		self.number = number
+		self.residence = residence
+		self.age = age
+		self.hobby = hobby
+		print("info is saved")
+	
+	def specialData(self):
+		print("%s살, %s가 취미" %(self.age, self.hobby))
+		
+		
+user1 = phoneBook("김구름", "01011111111", "판교")
+user1.showData()
+
+friend1 = BestFriend("이에듀", "01022222222", "강남", "23", "영화보기")
+friend1.showData()
+friend1.specialData()
+
+'''
+info is saved
+판교 거주 김구름: 01011111111
+info is saved
+강남 거주 이에듀: 01022222222
+23살, 영화보기가 취미
+'''
