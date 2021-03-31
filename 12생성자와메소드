@@ -1,0 +1,49 @@
+# 객체 생성과 동시에 초깃값을 설정하는 메소드를 '생성자(Constructor)'라고 한다
+# 함수(특정 기능의 집합)>메소드(클래스 안의 함수)>생성자(객체를 생성할 때 자동 호출)
+# __init__ 만 생성자로 인식이 가능하다.
+# 여태까지 사용한 메소드는 '인스턴스 메소드' 를 말하며 self로 인스턴스의 영역에 접근하는 메소드를 의미한다.
+# self 매개변수를 갖지 않는 것을 '정적 메소드' 라고 부른다. 클래스 안에서 메소드 앞에 @staticmethod 라고 표시해야 정적 메소드로 인식이 된다.
+# '클래스 메소드' 는 클래스 변수에 접근할 때 사용하며 cls 로 클래스 변수를 전달받는다.
+# 인스턴스 필드에 접근하지 않을 때 정적 메소드나 클래스 메소드를 사용하는데, 클래스 변수에 접근해야 할 때 클래스 메소드로 접근하는 것이 더 용이하다.
+
+------------------------------------------------------------------
+
+# 생성자를 이용하면 매번 .example 을 쓰지 않아도 된다.
+
+class Triangle :
+    def __init__(self, b, h) : #생성자
+        self.b = b
+        self.h = h
+    
+    def area(self) :
+        return self.b * self.h / 2
+
+   
+tri1 = Triangle(4, 5) #호출하면서 바로 인자 전달
+tri2 = Triangle(6, 10)
+
+print(tri1.b, tri1.h, tri1.area())
+print(tri2.b, tri2.h, tri2.area())
+
+-------------------------------------------------------------
+# %s 와 같은 포매팅 이용하는 방법을 생각해보자
+
+
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+class Member:
+	
+	def __init__(self, id, pw ):
+		self.id = id
+		self.pw = pw
+		
+	def getId(self):
+		return "%s %s" %(self.id, self.pw)
+		
+user1 = Member('goormedu', 'goorm')
+print(user1.getId())
+
+'''
+goormedu goorm
+'''
