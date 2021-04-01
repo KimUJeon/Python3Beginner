@@ -1,0 +1,20 @@
+# 다음과 같이 pass 를 사용하는 경우 아무런 문제 없이 넘어감
+
+<오류 피하기>
+
+try:
+  10 / 0
+except ZeroDivisionError:
+  pass
+  
+  
+-------------------------------------------------------------------
+<오류 만들기>
+
+# try 안에 NameError 에러를 raise를 이용해 발생시킴.
+# except 이용 NameError 발생시 NameError occurred 문장 출력
+
+try:
+  raise NameError
+except NameError:
+  print("NameError occurred")
