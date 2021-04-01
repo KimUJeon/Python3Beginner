@@ -1,0 +1,12 @@
+# from 모듈 이름 import 모듈 함수
+# 를 사용할 경우 해당 함수 앞에 모듈 이름을 붙이지 않아도 괜찮음
+# 모든 함수를 포함 하고 싶을 경우는
+# from 모듈 이름 import * 로 표현하면 된다.
+
+
+
+from my_module import three_times
+from my_module import ten_times
+
+print(three_times(10)) #=> 30
+print(ten_times(10)) #=> 100
