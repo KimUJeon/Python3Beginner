@@ -1,0 +1,37 @@
+# 계산기 코드를 모듈로 사용하려 함
+# import 하려는 파일이 다른 경로에 있는 경우는 파일의 경로를 함께 작성해 주면 된다.
+
+#file 이름 : calculator.py
+
+def add(a, b):
+  return(a + b)
+  
+def sub(a, b):
+  return(a - b)
+  
+def mul(a, b):
+  return(a * b)
+
+def div(a, b):
+  return(a / b)
+
+def mod(a, b):
+  return(a % b)
+  
+-----------------------------------------------------------------------
+<main 파일>
+
+import calcultor
+
+add_result = calculator.add(10,2)
+sub_result = calculator.sub(10,2)
+mul_result = calculator.mul(10,2)
+div_result = calculator.div(10,2)
+mod_result = calculator.mod(10,2)
+
+print(add_result)  #=> 12
+print(sub_result)  #=> 8
+print(mul_result)  #=> 20
+print(div_result)  #=> 5
+print(mod_result)  #=> 0
+
