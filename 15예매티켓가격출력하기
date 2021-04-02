@@ -1,0 +1,34 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+#다음 주어진 변수는 임의 설정입니다
+choice = "La La Land"
+people = 5
+sale = 4000
+
+origin_price = people * 12000
+sale_price = sale * people
+total_price = origin_price - sale_price
+
+print("")
+print("<예매 상세 내역>")
+print("==============================")
+print(f"영화 제목: {choice}")
+print(f"관람 인원: {people}명")
+print(f"합산 금액: {origin_price}원")
+print(f"할인 금액: {sale_price}원")
+print("------------------------------")
+print(f"실 결제액: {total_price}원")
+print("==============================")
+
+'''
+<예매 상세 내역>
+==============================
+영화 제목: La La Land
+관람 인원: 5명
+합산 금액: 60000원
+할인 금액: 20000원
+------------------------------
+실 결제액: 40000원
+==============================
+'''
