@@ -1,0 +1,35 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+coupon_dic = {'WELCOME':2000, 'VALENTINE':3000, 'CHRISTMAS':4000, 'INDEPENDENCE':5000}
+process = True #할인권 사용에 대해 다시 판단할 때 사용됩니다
+
+usage = input("할인권을 사용하시려면 y, 금액 확인으로 넘어가시려면 n을 입력해주세요: ") 
+
+while process:
+	if usage == 'y':
+		coupon = input("쿠폰 번호를 입력해주세요: ")
+		if coupon in coupon_dic:
+			sale = coupon_dic.get(coupon)
+			print("%d원 할인됩니다" %sale)
+			break
+		else:
+			print('존재하지 않는 할인권입니다')
+			usage = input("할인권을 다시 입력하려면 y, 아니면 n을 입력해주세요: ")
+	elif usage == 'n':
+		sale = 0
+		print('할인권을 사용하지 않았습니다')
+		break
+	else:
+		usage = input('잘못된 입력입니다. 다시 입력해주세요: ')
+    
+ 
+ '''
+할인권을 사용하시려면 y, 금액 확인으로 넘어가시려면 n을 입력해주세요: o
+잘못된 입력입니다. 다시 입력해주세요: y
+쿠폰 번호를 입력해주세요: ORANGE
+존재하지 않는 할인권입니다
+할인권을 다시 입력하려면 y, 아니면 n을 입력해주세요: y
+쿠폰 번호를 입력해주세요: INDEPENDENCE
+5000원 할인됩니다
+'''
